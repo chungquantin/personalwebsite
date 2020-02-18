@@ -1,0 +1,710 @@
+$primarycolor: white;
+$secondarycolor: black;
+$avatar: 300px;
+$max_screen: 100%;
+$card_width:0%;
+$card_height:450px;
+*{
+    box-sizing: border-box;
+}
+@import 'font';
+@import 'buttoncustom' ;
+@import 'buttoncusconstrast';
+@import 'animate' ;
+@mixin border_change{
+background: linear-gradient(283deg, #feaf00, #daa106, #f1390a);
+background-size: 600% 600%;
+
+-webkit-animation: AnimationName 7s ease infinite;
+-moz-animation: AnimationName 7s ease infinite;
+animation: AnimationName 7s ease infinite;
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 9%}
+    50%{background-position:100% 92%}
+    100%{background-position:0% 9%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 9%}
+    50%{background-position:100% 92%}
+    100%{background-position:0% 9%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 9%}
+    50%{background-position:100% 92%}
+    100%{background-position:0% 9%}
+} 
+}
+@mixin flex_middle($direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+}
+@mixin default_section($height_value,$background_color,$background_image) {
+    height:$height_value;
+    width: 100%; 
+    background-color: $background_color;
+    background-image: url($background_image);
+}
+@mixin transition($property: all, $duration: 0.5s, $ease: cubic-bezier(0.65,-0.25,0.25, 1.95)) {
+    transition: $property $duration $ease;
+  }
+@mixin inline-animation($duration){
+    $name: inline-#{unique-id()};
+    @keyframes #{$name} {
+        @content;
+    }
+
+    -webkit-animation: $name $duration ease infinite;
+    -moz-animation: $name $duration ease infinite;
+    animation: $name $duration ease infinite;
+
+}
+.section_1{
+    @include default_section(700px,$primarycolor,'' );
+
+}
+.section_4{
+    @include default_section(800px,$primarycolor,'' );
+
+}
+.section_2{
+    @include default_section(fit-content,rgb(255, 255, 255),'' )
+}
+.section_5{
+    @include default_section(60px,rgba(252, 207, 58, 0.856),'');
+}
+.section_3{
+    @include default_section(855px,black,'' );
+    h1{
+        padding: 10px;
+    }
+    width: 100%;
+    height: 750px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("./images/rmitcapitol.jpg");
+    background-blend-mode: multiply;
+    background-color: rgba(238, 208, 76, 0.699);
+}
+.name_space{
+    @include default_section(150px,$secondarycolor,'');
+    @include flex_middle(column);
+}
+.section_1{
+    @include flex_middle(column);
+    width: 100%;
+    height: 750px;
+    
+}
+
+
+
+.nav_bar{
+    @include default_section(50px,$secondarycolor,'');
+    @include flex_middle(column);
+    
+    .nav_item{
+        @include flex_middle(row);
+        .item{
+        color: white;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        letter-spacing: 1px;
+        font-weight: bold;
+        font-size: 13px;
+        margin-right: 8%;
+        @media only screen and (max-width:600px){
+            display: none;
+        }
+    }
+}
+.nav_item_600{
+    display: none;
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 13px;
+    margin: 0px auto;
+    @media only screen and (max-width:600px){
+        display: block;
+    }
+}
+}
+
+@mixin cross_browser($content) {
+    -webkit-transition: $content;
+    -moz-transition: $content;
+    -o-transition: $content;
+}
+$screen_width: 1600px;
+.section_2{
+    @include flex_middle(column);
+    padding: 50px;
+    transition: all 0.5s linear;
+    background-image: url('./images/whitebg.png');
+    background-size: cover;
+    background-blend-mode: multiply;
+   @media only screen and (max-width:1000px){
+       .inline_row{
+       margin: 0px auto;
+       flex-direction: column;
+        }
+    }
+    .big_card_2{
+        transition: opacity 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        width: 300px;
+        border-radius: 35px;
+        margin: 20px;
+        height: $card_height;
+        cursor: pointer;
+        object-position: bottom;
+        .text_content{
+            opacity: 0.1;
+            display: none;
+        }
+        .text_in_card{
+            transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+            color: white;
+            margin: 0px auto;
+            font-family: "Tungsten Bold";
+            padding-left:8px;
+            font-size: 43px;
+            letter-spacing: 3px;
+        }
+        @media only screen and (max-width:1400px){
+            height: 300px;
+            .text_in_card{
+                font-size: 28px;
+            }
+            .text_content{
+                font-size: 14px;
+            }
+        }
+        @media only screen and (max-width:1000px){
+            height: $card_height;
+        }
+        &#item_1{
+            background-image: url('./images/books.JPG');
+            background-size: cover;
+            background-blend-mode: multiply;
+            background-color: rgba(48, 48, 46, 0.568);
+        }
+        &#item_2{
+            background-image: url('./images/travel.JPG');
+            background-size: cover;
+            background-blend-mode: multiply;
+            background-color: rgba(48, 48, 46, 0.651);
+        }
+        &#item_3{
+            background-image: url('https://static01.nyt.com/images/2020/01/13/opinion/13Greenidge/merlin_165799716_966c353d-bf03-481a-9785-b6a6dabe3811-mobileMasterAt3x.jpg');
+            background-size: cover;
+            background-blend-mode: multiply;
+            background-color: rgba(48, 48, 46, 0.651);
+        }
+        &#item_4{
+            background-image: url('./images/coffee1.JPG');
+            background-size: cover;
+            background-blend-mode: multiply;
+            background-color: rgba(48, 48, 46, 0.651);
+        }
+        &#item_1,&#item_2,&#item_3,&#item_4{
+            &:hover,&:active,&:focus{
+                transition: all 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+                
+                .text_in_card{
+                    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+                    letter-spacing: 7px;
+                    border: 2px solid rgb(231, 189, 3);
+                    background-color: rgba(0, 0, 0, 0.527);
+                }
+                .text_content{
+                    font-family: "Tahoma",sans-serif;
+                    opacity: 1;
+                    margin: 20px 20px 20px 30px;
+                    color: white;
+                    display: block;
+                    animation:  fadeInUp 1s ;
+                }
+            }
+            
+        }
+        
+    }
+    
+    .big_card, .big_card_2{
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.589);
+        
+        @include flex_middle(column);
+    }
+}
+#myVideo {
+    bottom: 0;
+    min-width: 120%;
+    min-width: 120%;
+    position: relative;
+  }
+  
+.section_3{
+    @include flex_middle(row);
+    .big_card{
+        background-color: black;
+        width: 0px;
+        height: inherit ;
+        position: relative;
+        visibility: hidden;
+        overflow: hidden;
+        video{
+            filter:brightness(30%);
+        }
+        .title_vid{
+            transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+            position: absolute;
+            color: white;
+            top: 42%;
+            left: 15%;
+            font-size: 50px;
+            font-family: "Bangers",cursive;
+        }
+        .title_vid_change{
+            transition: all 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+            position: absolute;
+            color: white;
+            top: 14%;
+            left: 12%;
+            font-size: 40px;
+            font-family: 'Fugaz One', cursive;
+            height: 300px;
+            width: 300px;
+            opacity:0;
+            padding: 55px;
+            border-radius: 160px;
+            background-size: cover;
+            background-color: rgba(167, 7, 7, 0.87);
+            @include flex_middle(column)
+        }
+        .image_box{
+            transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+            width: 200px;
+            margin: 0px auto;
+            position: absolute;
+            top:24%;
+            left: 25%;
+        }
+        .image_small{
+            transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+            width: 0px;
+            height: 390px;
+            position: absolute;
+            left: 44%;
+            opacity:1;
+            
+            img{
+                width: 100%;
+                
+            }
+            
+        }
+        
+        .main_box{
+            transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+            position: absolute;
+            padding-top: 10px;
+            width: 400px;
+            height: 400px;
+            left: 33%;
+            &:hover,&:active,&:focus{
+                transition: all 0.5s linear;
+                .image_box{
+                    transition: all 0.8s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+                    transform: scale(0);
+                    
+                }
+                .image_small{
+                    transition: all 0.5s 0.7s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+                    opacity: 1;
+                    width: 40px;
+                    animation: orbit 4s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+                }
+                .title_vid{
+                    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+                    opacity: 0;
+                }
+                .title_vid_change{
+                    transition: all 0.8s 0.6s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+                    opacity: 1;
+                    background-image:url("https://www.rmit.edu.au/content/dam/rmit/rmit-images/marketing-only/City-Campus-Masthead-1920x960-800x800.jpg.transform/rendition-800x800/image.jpg");
+                    background-blend-mode: multiply;
+                    cursor: pointer;
+                }
+                .title_vid_change .explore{
+                    transition: all 0.8s 0.6s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+                    animation: word_dancing 2s linear infinite;
+                    box-shadow: 0px 10px  white;
+                }
+            }
+        }
+    }
+    .big_card_2{
+        width: fit-content;
+        height: inherit;
+        margin-right: 40px;
+    }
+    .big_card, .big_card_2{
+        @include flex_middle(column);
+    }
+    h1{
+        font-size: 50px;
+        padding: 0;
+    }
+    
+}
+@keyframes orbit { 
+    from { -webkit-transform:rotate(0deg) } 
+    to { -webkit-transform:rotate(360deg) } }
+@keyframes word_dancing{
+    0%{ font-size:40px; letter-spacing: 0px;}
+    50%{ font-size:42px;letter-spacing: 1px;}
+    100%{font-size:40px; letter-spacing: 0px;}
+}
+
+.text_in_namespace{
+    color: rgba(255, 255, 255, 0.863);
+    margin: 0px auto;
+    padding:10px;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    @media only screen and (max-width:800px){
+        font-size: 15px;
+    }
+
+}
+.text_in_cover{
+    font-family: "Tahoma";
+    letter-spacing: 5px;
+    color: rgb(143, 143, 143);
+    padding: 20px;
+    top:220px;
+    left:30px;
+    position: absolute;
+    font-size: 30px;
+    font-weight: 300px;
+    animation: fadeInRight 1s ease-in;
+}
+.button_subcribe{
+    width: fit-content;
+    margin: 0px auto;
+    margin-top: 20px;
+    font-size: 16px;
+    font-family: "Roboto",sans-serif;
+    background-color: rgb(255, 208, 0);
+    padding: 10px 30px;
+    border: 0px;
+    border-radius: 180px;
+}
+.name_in_cover{
+    font-family: "Roboto",Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+    top:270px;
+    left:50px;
+    padding: 20px;
+    color: white;
+    font-size: 80px;
+}
+.description,.description_2{
+    position: absolute;
+    font-family: "Tungsten Bold";
+    background-color: rgba(255, 208, 0, 0.699);
+    color: rgba(0, 0, 0, 0.699);
+    top:390px;
+    left:260px;
+    letter-spacing: 1.5px;
+    padding: 3px;
+    font-size: 15px;
+    animation: fadeInRight 1.5s ease-in;
+}
+.description{
+    @media only screen and (max-width:680px){
+        top: 500px;
+        left: 120px;
+    }
+}
+.description_2{
+    left: 350px;
+    @media only screen and (max-width:680px){
+        top: 500px;
+        left: 200px;
+    }
+}
+
+.text{
+    @include flex_middle(row);
+    padding-bottom:20px;
+}
+.slider_down {
+	overflow-y: hidden;
+ /* approximate max height */
+	transition-property: all;
+	transition-duration: 1s;
+    transition-timing-function:cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    
+}
+.slider {
+	overflow-y: hidden;
+	max-height: 500px; /* approximate max height */
+	transition-property: all;
+	transition-duration: .5s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+
+.inline_row{
+    @include flex_middle(row);
+}
+.demoButton{
+    width: 50%;
+    font-family: "Roboto", sans-serif;
+    font-size: 50px;
+    color: white;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    background-color: rgb(0, 0, 0);
+    padding: 3px 15px 6px 20px;
+    cursor: pointer;
+    border: 0px;
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    &:hover,&:active,&:focus,&:target{
+        transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        background-color: rgb(255, 208, 0);
+        letter-spacing: 4px;
+        color: black;
+        width: 100%;
+    }
+}
+
+.wallpaper_cover{
+    position:relative;
+    height:inherit;
+    width:100%;
+    margin:0 auto;
+  }
+  .top,.bottom{
+    position: absolute;
+    left:0;
+    height: inherit;
+    width: 100%;
+    object-fit: cover; 
+  }
+  .top,.bottom{
+    filter: brightness(50%);
+  }
+  @keyframes fadeIn {
+    0% {
+    opacity:1;
+  }
+  45% {
+  opacity:1;
+  }
+  55% {
+  opacity:0;
+  }
+  100% {
+  opacity:0;
+  }
+  }
+  
+  .wallpaper_cover .top {
+    animation-name: fadeIn;
+    animation-timing-function: 1s ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 7s;
+    animation-direction: alternate;
+    }
+.title{
+    margin: 0px auto;
+    text-decoration: none;
+    font-family: "Roboto",sans-serif;
+  color: black;
+  padding-bottom: 0.15em;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  box-shadow: inset 0 -0.2em 0 rgb(255, 196, 0);
+  transition: 0.2s;
+font-size: 30px;
+letter-spacing: 3px;
+}
+.card_active{
+    
+    color: rgb(255, 255, 255);
+    box-shadow: inset 0 -2em 0 rgb(255, 196, 0);
+    transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+}
+.title_s4{
+    width: fit-content;
+    padding-top:50px;
+    padding-bottom: 70px;
+    margin: 0px auto;
+    font-size: 40px;
+    font-family: "Roboto",sans-serif;;
+    letter-spacing: 3px;
+}
+.content_s5{
+    background-color: white;
+    height:600px;
+    width: 800px;
+    padding-top: 200px;
+    margin: 0px auto;
+    top: 200px;
+    border-radius: 45px;
+    box-shadow:10px 10px 10px rgba(231, 204, 130, 0.589);
+}
+.section_5{
+    @include flex_middle(column);
+}
+.section_4{
+    overflow-x: hidden;
+   .inline_row{
+       margin-bottom: 20px;
+       .card_s4{
+           transition: all 0.5s linear;
+           width: 16%;
+           height: 250px;
+           margin: 6px;
+           background-size:cover;
+           background-blend-mode: multiply;
+           background-color: rgb(226, 203, 98);
+           padding: 10px;
+           filter: brightness(90%);
+           &:hover,&:active,&:focus{
+               width: 22.4%;
+               .text_s4{
+                   transition: all 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+                   opacity: 1;
+                   box-shadow: 0px 5px white;
+               }
+               .text_s4_small{
+                   opacity: 1;
+                   animation: fadeInRight 0.5s linear;
+               }
+           }
+           .text_s4{
+            transition: all 0.3s linear;
+            color: white;
+            font-family: "Tungsten Bold";
+            margin: 0px auto;
+            width: fit-content;
+            margin-top: 108px;
+            font-size: 180%;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+            opacity: 0;
+            @media only screen and (max-width:1000px){
+                font-size: 80%;
+            }
+        }
+        .text_s4_small{
+            transition: all 0.4s linear;
+            color: white;
+            margin: 0px auto;
+            width: fit-content;
+            font-family: "Tahoma",sans-serif;
+            font-size: 15px;
+            font-weight: 500;
+            opacity:0;
+            @media only screen and (max-width:1000px){
+                font-size: 10px;
+            }
+        }
+       }
+   }
+}
+.warning{
+    color: black;
+    font-size: 100%;
+    font-family: "Roboto",sans-serif;
+    margin: 0px auto;
+    letter-spacing: 3px;
+    width: fit-content;
+}
+.section_6{
+    @include default_section(500px,rgb(24, 24, 24) ,'' );
+    padding: 10px;
+    .big_text{
+        color:white;
+        margin: 0px auto;
+        width: fit-content;
+        padding: 10px;
+        font-size: 50px;
+        padding-top:80px;
+        font-family: 'Abril Fatface', cursive;
+    }
+    .box_link{
+        width: 25%;
+        height: 50px;
+        margin: 0px auto;
+        margin-top: 50px;
+        @include flex_middle(row);
+        
+        .element{
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: 1px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-right: 30%;
+            
+        }
+        @media only screen and (max-width:900px){
+            flex-direction: column;
+            margin-left: 20px;
+        }
+    }
+    .box_link_2{
+        width: fit-content;
+        height: 50px;
+        margin: 0px auto;
+        margin-top: 50px;
+        @include flex_middle(row);
+        color: rgb(119, 119, 119);
+        font-size: 13px;
+    }
+    .box_link_3{
+        width: fit-content;
+        height: fit-content;
+        margin: 0px auto;
+        margin-top: 10px;
+        @include flex_middle(row);
+        .socialmedia_icon{
+            padding: 5px;
+            border-radius: 90px;
+            background-color: white;
+            width: 40px;
+            margin-right: 10px;
+            overflow: hidden;
+            height: 40px;
+            .fb{
+                
+                width: 100%;
+            }
+            .ins{
+                width:100%;
+                padding: 5px;
+            }
+            .in{
+                width: 100%;
+                padding: 2px;
+            }
+            .outlook{
+                width: 100%;
+                padding: 1px;
+            }
+            .gmail{
+                width: 100%;
+                padding: 2px;
+            }
+        }
+    }
+    
+}
