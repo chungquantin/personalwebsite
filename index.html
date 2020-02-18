@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html style="overflow-x: hidden; scroll-behavior: smooth;">
+<head>
+  <meta charset="UTF-8">
+  <title>Chase Chung's</title>
+  {% load static %}
+  <link href="//db.onlinewebfonts.com/c/561f38b1f4570de0fb8a39d691ab058c?family=Tungsten+Bold" rel="stylesheet" type="text/css"/>
+   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+   <link href="https://fonts.googleapis.com/css?family=Fugaz+One|Vidaloka&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <script src="{% static 'js/script.js' %}"></script>
+</head>
+<body style="margin: 0px;">
+    <nav class="nav_bar">
+        <div class="nav_item">
+            <a href="#s1" class="item">HOME</a>
+            <a href="#" class="item">INTERESTS</a>
+            <a href="#" class="item">EDUCATION</a>
+            <a href="#s4" class="item">EXPERIENCE</a>
+            <a href="#" class="item" style="margin-right: 0;">CONTACT</a>
+        </div>
+        <div class="nav_item_600">
+            <div class="item">CHASE CHUNG</div>
+        </div>
+    </nav>
+    <div class="section_1" id="s1">
+        <div class="wallpaper_cover">
+            <img src="{% static "css/images/wallpaper.JPG"%}" class="bottom">
+            <img src="{% static "css/images/avatar.JPG"%}" class="top"> 
+            
+        <div class="brief_info">
+        <div class="text_in_cover" >
+            Ciao I'm...
+        </div>
+        <div class="name_in_cover" data-aos="fade-right">
+            CHASE CHUNG.
+        </div>
+        <div class="big_description">
+        <div class="description">
+            developer
+        </div>
+        <div class="description_2">
+            product manager
+        </div>
+        </div>
+        </div>
+        </div>
+    </div>
+    <div class="name_space">
+        <div class="text_in_namespace">I'm a college student who have a desire to make money through designing website.</div>
+        <button class="button_subcribe">CONTACT</button>
+        
+    </div>
+    <div class="section_2" id="s2">
+        <div class="title" id="titl">&nbsp;&nbsp;MY INTERESTS&nbsp;&nbsp;</div>
+        <div class="inline_row">
+        <div class="big_card_2" onmousemove="hover_bg_change()" onmouseout="mouse_left()" style="" id="item_1" data-aos="fade-up">
+            <div class="text_in_card" id="text_card_1">READING</div>
+            <div class="text_content">There's a large pool of knowledge out there and reading is the fastest way to approach it. The doomsday is the day we have no books to read.</div>
+        </div>
+        <div class="big_card_2" onmousemove="hover_bg_change_1()" onmouseout="mouse_left_1()" id="item_4" data-aos="fade-up">
+            <div class="text_in_card" id="text_card_1">COFFEE</div>
+            <div class="text_content">The bitterness of coffee brings to life a more wonderful flavor that make it becomes an inevitable beverage. </div>
+        </div>
+            <div class="big_card_2"  onmousemove="hover_bg_change_2()" onmouseout="mouse_left_2()" id="item_2" data-aos="fade-up">
+                <div class="text_in_card" id="text_card_2">TRAVELLING</div>
+                <div class="text_content">Instead of sitting in my comfort zone and dreaming of somewhere far away, I would prefer to stand up, backpack on and start a crusade. </div>
+            </div>
+            <div class="big_card_2"  onmousemove="hover_bg_change_3()" onmouseout="mouse_left_3()" id="item_3" data-aos="fade-up">
+                <div class="text_in_card" id="text_card_3">MOVIES</div>
+                <div class="text_content">Aside from other types of entertainment, cinematography can be considered as the most effective way to impart your ideas to other people through expressions of characters, plus, PERSONALLY.</div></div>
+            </div>
+        </div>
+    </div>
+    <div class="section_3">
+        
+        <div class="big_card_2" style="margin-left:60px;">
+            <button class="demoButton"  onclick='single_slide_down("id_card")' id="btnedu" >Education</button>
+        </div>
+        <div class="big_card slider_down" id="id_card">
+            <video muted loop id="myVideo">
+                <source src="{% static 'css/images/IT.mp4' %}" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+
+            
+            <a href="https://www.rmit.edu.vn/study-at-rmit/undergraduate-programs/bachelor-information-technology" class="main_box" id="mb" >
+                <img class="image_box" src="{% static 'css/images/rmitlogo.png' %}">
+                <div class="image_small">
+                <img src="{% static 'css/images/rmitlogo.png' %}">
+                </div>
+                <div class="title_vid" id="t1">RMIT University</div>
+                <div class="title_vid_change" id="t1"><span class="explore">EXPLORE!</span> </div>
+            </a>
+            
+        <button class="buttonclose1" style="left: 95%;" onclick="buttonclose('id_card')">
+            Close
+          </button>
+        
+            
+        </div>
+    </div>
+    <div class="section_4" id="s4">
+        <div class="title_s4" data-aos="fade-right">&nbsp;&nbsp;EXPERIENCE&nbsp;&nbsp;</div>
+        <div class="inline_row" data-aos="fade-left">
+            <div class="card_s4" style="background-image:url('{% static 'css/images/marathon2.jpg' %}');background-color:rgb(226, 203, 98);">
+                <div class="text_s4">TECHCOMBANK MARATHON</div>
+                <div class="text_s4_small">Race-kit Packing Volunteer</div>
+            </div>
+            <div class="card_s4" style="background-image:url('{% static 'css/images/office3.jpg' %}');background-color:rgba(0, 0, 0, 0.3);">
+                <div class="text_s4">FSI PART-TIME JOB</div>
+                <div class="text_s4_small">Work Assistant</div></div>
+            <div class="card_s4" style="background-image:url('{% static 'css/images/youtube2bw.jpg' %}');background-color:rgb(226, 203, 98);">
+                <div class="text_s4">YOUTUBE 1ST VIDEO</div>
+                <div class="text_s4_small">Spring Festival Project</div></div>
+            <div class="card_s4" style="background-image:url('{% static 'css/images/singaporebw.jpg' %}');background-color:rgba(0, 0, 0, 0.3);">
+                <div class="text_s4">SINGAPORE 1ST ABROAD</div>
+                <div class="text_s4_small">Tet Festival</div></div>
+            <div class="card_s4" style="background-image:url('{% static 'css/images/twintower.jpg' %}');background-color:rgb(226, 203, 98);">
+                <div class="text_s4">MALAYSIA 1ST VISIT</div>
+                <div class="text_s4_small">Tet Festival</div></div>
+            
+        </div>
+        <div class="inline_row"  data-aos="fade-right" style="margin-bottom: 100px;">
+            <div class="card_s4" style="background-image:url('{% static 'css/images/aieventbw.jpg' %}');background-color:rgba(0, 0, 0, 0.3);">
+                <div class="text_s4">DEMYSTIFYING AI EVENT</div>
+                <div class="text_s4_small">RMIT Workshop</div></div>
+            <div class="card_s4" style="background-image:url('{% static 'css/images/arduinobw.jpg' %}');background-color:rgb(226, 203, 98);">
+                <div class="text_s4">ARDUINO 1ST REAL PROJECT</div>
+                <div class="text_s4_small">RMIT COSC2083 Assignment</div></div>
+            <div class="card_s4" style="background-image:url('{% static 'css/images/hoan.jpg' %}');background-color:rgba(0, 0, 0, 0.3);filter: saturate(0);">
+                <div class="text_s4">HOI AN 1ST FLIGHT</div>
+                <div class="text_s4_small">Vietnam World Heritage Site</div></div>
+            <div class="card_s4" style="background-image:url('{% static 'css/images/coffeebw.jpg' %}');">
+                <div class="text_s4">THE WORKSHOP COFFEE</div>
+                <div class="text_s4_small">Top Tasting Coffee in Vietnam</div></div>
+            <div class="card_s4" style="background-image:url('{% static 'css/images/pub.jpg' %}');background-color:rgba(0, 0, 0, 0.3);filter:saturate(0);">
+                <div class="text_s4">THE IRON BANK PUB 1ST VISIT</div>
+                <div class="text_s4_small">Chilling with Bros.</div></div>
+            
+        </div>
+    </div>
+    <div class="section_5">
+        <div class="warning">UNDER CONSTRUCTION...</div>
+    </div>
+    <div class="section_6">
+        <div class="big_text">Let me bring you to the Internet.</div>
+        <div class="box_link"><div class="element">HOME</div>
+        <div class="element">INTERESTS</div>
+        <div class="element">EDUCATION</div>
+        <div class="element">EXPERIENCE</div>
+        <div class="element">CONTACT</div>
+        <div class="element" style="margin-right: 0px;">...</div></div>
+        <div class="box_link_2">
+            © 2019 Chase Chung. As known as Chung Quan Tin. Freelance developer who is a freshman in RMIT. 
+        </div>
+        <div class="box_link_3">
+            <div class="socialmedia_icon">
+                <img src="{% static 'css/images/fb.png' %}" class="fb">
+            </div>
+            <div class="socialmedia_icon">
+                <img src="{% static 'css/images/ins1.png' %}" class="ins">
+            </div>
+            <div class="socialmedia_icon">
+                <img src="{% static 'css/images/in.jpg' %}" class="in">
+            </div>
+            <div class="socialmedia_icon">
+                <img src="{% static 'css/images/outlook1.png' %}" class="outlook">
+            </div>
+            <div class="socialmedia_icon">
+                <img src="{% static 'css/images/gmail.jpg' %}" class="gmail">
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script>
+    function hover_bg_change(){
+    document.getElementById("s2").style.backgroundImage="url('{% static 'css/images/booksbg3.jpg' %}')";
+    document.getElementById("item_2").style.opacity="0.1";
+    document.getElementById("item_3").style.opacity="0.1";
+    document.getElementById("item_4").style.opacity="0.1";
+    document.getElementById("titl").classList.add('card_active');
+}
+function mouse_left(){
+    document.getElementById("s2").style.backgroundImage="url('{% static 'css/images/whitebg.png' %}')";
+    document.getElementById('item_2').style.opacity="1";
+    document.getElementById('item_3').style.opacity="1";
+    document.getElementById('item_4').style.opacity="1";
+    document.getElementById("titl").classList.remove('card_active');
+}
+function hover_bg_change_1(){
+    document.getElementById("s2").style.backgroundImage="url('{% static 'css/images/coffeebg2.jpg' %}')";
+    document.getElementById("item_2").style.opacity="0.1";
+    document.getElementById("item_1").style.opacity="0.1";
+    document.getElementById('item_3').style.opacity="0.1";
+    document.getElementById("titl").classList.add('card_active');
+}
+function mouse_left_1(){
+    document.getElementById("s2").style.backgroundImage="url('{% static 'css/images/whitebg.png' %}')";
+    document.getElementById('item_2').style.opacity="1";
+    document.getElementById('item_1').style.opacity="1";
+    document.getElementById('item_3').style.opacity="1";
+    document.getElementById("titl").classList.remove('card_active');
+}
+function hover_bg_change_2(){
+    document.getElementById("s2").style.backgroundImage="url('{% static 'css/images/travelbg2.jpg' %}')";
+    document.getElementById("item_1").style.opacity="0.1";
+    document.getElementById("item_3").style.opacity="0.1";
+    document.getElementById("item_4").style.opacity="0.1";
+    document.getElementById("titl").classList.add('card_active');
+}
+function mouse_left_2(){
+    document.getElementById("s2").style.backgroundImage="url('{% static 'css/images/whitebg.png' %}')";
+    document.getElementById('item_1').style.opacity="1";
+    document.getElementById('item_3').style.opacity="1";
+    document.getElementById("item_4").style.opacity="1";
+    document.getElementById("titl").classList.remove('card_active');
+}
+function hover_bg_change_3(){
+    document.getElementById("s2").style.backgroundImage="url('{% static 'css/images/moviesbg2.jpg' %}')";
+    document.getElementById("item_2").style.opacity="0.1";
+    document.getElementById("item_1").style.opacity="0.1";
+    document.getElementById("item_4").style.opacity="0.1";
+    document.getElementById("titl").classList.add('card_active');
+}
+function mouse_left_3(){
+    document.getElementById("s2").style.backgroundImage="url('{% static 'css/images/whitebg.png' %}')";
+    document.getElementById('item_2').style.opacity="1";
+    document.getElementById('item_1').style.opacity="1";
+    document.getElementById("item_4").style.opacity="1";
+    document.getElementById("titl").classList.remove('card_active');
+}
+
+</script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+        offset:200,
+        duration:2000,
+    });
+    
+  </script>
+
+</html>
